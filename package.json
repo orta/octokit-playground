@@ -1,0 +1,16 @@
+{
+  "name": "octokit-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "devDependencies": {
+    "snowpack": "^3.0.11"
+  },
+  "dependencies": {
+    "@octokit/core": "^3.2.5",
+    "@octokit/rest": "^18.1.1"
+  }
+}
