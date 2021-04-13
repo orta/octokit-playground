@@ -74,7 +74,6 @@ octokit
         });
 
         // Adds a global instance of octokit to the type system
-        sb.languageServiceDefaults.addExtraLib(`{}`, "file:///node_modules/@types/ambient/package.json");
         const globalDTS = `const octokit: import("@octokit/rest").Octokit  `
         sb.languageServiceDefaults.addExtraLib(globalDTS, "file:///node_modules/@types/ambient/index.d.ts");
       });
