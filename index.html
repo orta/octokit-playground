@@ -41,7 +41,11 @@
 
 const a = new Octokit()
 a.actions.cancelWorkflowRun
-        `;
+        
+// Also set up:
+octokit
+`;
+
         const isOK = main && window.ts && sandboxFactory;
         if (isOK) {
           document
@@ -68,6 +72,11 @@ a.actions.cancelWorkflowRun
         Object.keys(dts).forEach((path) => {
           sb.languageServiceDefaults.addExtraLib( dts[path], "file:///" + path);
         });
+
+        // Adds a global instance of octokit to the type system
+        sb.languageServiceDefaults.addExtraLib(`{}`, "file:///node_modules/@types/ambient/package.json");
+        const globalDTS = `const octokit: import("@octokit/rest").Octokit  `
+        sb.languageServiceDefaults.addExtraLib(globalDTS, "file:///node_modules/@types/ambient/index.d.ts");
       });
     };
 
