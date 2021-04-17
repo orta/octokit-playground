@@ -7,10 +7,10 @@
     "start": "serve"
   },
   "devDependencies": {
+    "@octokit/core": "^3.2.5",
+    "@octokit/rest": "^18.1.1",
+    "node-fetch": "^2.6.1",
     "serve": "^11.3.2"
   },
-  "dependencies": {
-    "@octokit/core": "^3.2.5",
-    "@octokit/rest": "^18.1.1"
-  }
+  "dependencies": {}
 }
